@@ -1,0 +1,33 @@
+{
+    "pageConfig": {
+        "styles": {
+            "titleNView": {
+                "titleColor": "#fff",
+                "titleSize": "17px",
+                "backgroundColor": "#447EA4",
+                "progress": {
+                    "color": "#00FF00",
+                    "height": "2px"
+                },
+                "buttons": [
+                    {
+                        "color": "#fff",
+                        "text": "导航1",
+                        "float": "left",
+                        "fontSrc": "utils/mui/fonts/mui.ttf",
+                        "fontSize": "17px",
+                        "onclick": "showNav"
+                    }
+                ]
+            }
+        },
+        "show": {
+            "aniShow": "none",
+            "duration": "100"
+        }
+    },
+    "request": [
+        "../../utils/mui/css/mui.picker.min.css",
+        "../../utils/mui/js/mui.picker.min.js"
+    ]
+}

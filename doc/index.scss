@@ -1,0 +1,93 @@
+body {}
+
+.view {
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    top: 0;
+    bottom: 0;
+    &.view-list {
+        border-right: solid 1px rgba(0, 0, 0, .07);
+        font-size: 13px;
+        left: 0;
+        width: 300px;
+        background-color: #fafafa;
+        .nav-top {
+            height: 52px;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 0;
+            input[type=text] {
+                display: inline-block;
+                height: 52px;
+                width: 100%;
+                border: none;
+                line-height: 52PX;
+                outline: none;
+                background-color: #fafafa;
+                padding-left: 15px;
+                margin: 0;
+            
+            }
+        }
+        .nav-list {
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                .nav-item {
+                    display: block;
+                    width: 100%;
+                    padding: 10px 0;
+                    padding-left: 20px;
+                    cursor: pointer;
+                    transition: all 0.3s; // height: 14px;
+                    // line-height: 14px;
+                    margin: 10px 0;
+                    .high {
+                        background-color: #ff0;
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                    &.nav-list-head {
+                        margin-top: 30px;
+                        padding-top: 30px;
+                        padding-left: 15px;
+                        border-top: solid 1px rgba(0, 0, 0, .07);
+                        cursor: text;
+                        color: #939da3;
+                        &:nth-child(1) {
+                            margin-top: 0;
+                        }
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                    &.low {
+                        opacity: 0.3;
+                    }
+                    &.hide {
+                        // display: none;
+                        height: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        overflow: hidden;
+                    }
+                    &.active {
+                        color: #008cff;
+                    }
+                }
+            }
+        }
+    }
+    &.view-content {
+        right: 0;
+        left: 300px;
+        .markdown-body {
+            margin: 0 auto;
+            padding: 20px 15px 40px 15px;
+            max-width: 800px;
+        }
+    }
+}

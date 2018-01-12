@@ -1,0 +1,92 @@
+body {
+    background-color: #ffffff;
+}
+
+.mui-segmented-control {
+    &.mui-scroll-wrapper {
+        height: 40px;
+    }
+    &.mui-segmented-control-inverted {
+        .mui-control-item {
+            height: 40px;
+            padding: 0 15px;
+            &.mui-active {
+                position: relative;
+                color: #60BCCC;
+                &:after {
+                    content: ' ';
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    background-color: #60BCCC;
+                    height: 3px;
+                }
+            }
+        }
+    }
+}
+
+.mui-fullscreen .mui-segmented-control~.mui-slider-group {
+    bottom: 52px;
+}
+
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {
+    border-top: 1px solid #EBEBEB;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.order-list {
+    font-size: 14px;
+    .order-list-item {
+        position: relative;
+        padding: 0 15px;
+        margin: 0;
+        overflow: hidden;
+        .mui-row {
+            padding: 5px 0;
+        }
+        .footer {
+            color: #9B9B9B;
+            .mui-icon {
+                font-size: 16px;
+            }
+        }
+        .select-box {
+            line-height: 60px;
+        }
+    }
+    .mui-table-view-cell:after {
+        left: 0;
+    }
+}
+
+.select-all {
+    padding: 10px;
+    border-bottom: solid 1px #EBEBEB;
+    .select-item {
+        padding: 0 5px;
+    }
+}
+
+.mui-btn,
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+    transition: none;
+}
+
+.mui-btn.mui-active:enabled,
+.mui-btn:enabled:active,
+button.mui-active:enabled,
+button:enabled:active,
+input[type=button].mui-active:enabled,
+input[type=button]:enabled:active,
+input[type=reset].mui-active:enabled,
+input[type=reset]:enabled:active,
+input[type=submit].mui-active:enabled,
+input[type=submit]:enabled:active {
+    color: #000;
+    background-color: #eee;
+}

@@ -1,0 +1,29 @@
+{
+	"index.html": {
+		"refer": [
+			"pages/index/index.html",
+			"pages/home/home.html",
+			"pages/nav/nav.html",
+			"pages/order/order.html",
+			"pages/orderInfo/orderInfo.html",
+			"pages/orderQuery/orderQuery.html"
+		],
+		"resources": [
+			"app.json",
+			"pages/order/order.json",
+			"assets/img/all/bg.png",
+			"pages/nav/nav.json",
+			"pages/index/index.json"
+		]
+	},
+	"pages/home/home.html": {
+		"refer": [
+			"pages/index/index.html"
+		]
+	},
+	"pages/order/order.html": {
+		"resources": [
+			"pages/order/order.json"
+		]
+	}
+}

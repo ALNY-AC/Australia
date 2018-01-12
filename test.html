@@ -1,0 +1,41 @@
+<!--  复选框 -->
+<div class="mui-checkbox checkbox-box">
+    <label>
+        <div class="input-box">
+            <input name="checkbox1" value="Item 1" type="checkbox" checked>
+        </div>
+    </label>
+</div>
+<hr>
+<div class="mui-checkbox checkbox-box checkbox-box-cube">
+    <label>
+        <div class="input-box">
+            <input name="checkbox1" class="fa fa-check-square" value="Item 1" type="checkbox" checked>
+        </div>
+    </label>
+</div>
+
+
+<!-- 订单模板 -->
+<div id="item2mobile" class="mui-slider-item mui-control-content">
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!-- 待支付 -->
+            <ul class="mui-table-view order-list">
+                <li class="mui-table-view-cell order-list-item" v-for='(item,index) in orderList[1]'>
+
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 title">{{item.title}}</div>
+                        <div class="mui-col-xs-6 text-right" v-html='getStateLabel(item,index)'></div>
+                    </div>
+                    <div class="mui-row footer">
+                        <div class="mui-col-xs-6 info">共10件商品</div>
+                        <div class="mui-col-xs-6 money text-right">总价：￥2,999
+                            <span class="mui-icon mui-icon-arrowright "></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

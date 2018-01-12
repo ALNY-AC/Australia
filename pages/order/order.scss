@@ -1,0 +1,160 @@
+body {
+    background-color: #ffffff;
+    color: #555;
+}
+
+.set-order-list {
+    font-size: 14px;
+    .set-order-item {
+        position: relative;
+        border-bottom: solid 1px #D8D8D8;
+        overflow: hidden;
+        padding: 0 0;
+        .set-order-item-check {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 124px;
+            line-height: 124px;
+        }
+        .set-order-item-body {
+            border-bottom: solid 1px #D8D8D8;
+            padding: 10px 0;
+            .order-head {
+                display: inline-block;
+                background-color: #F2F2F2;
+                width: 60px;
+                height: 60px;
+            }
+            .order-info-box {
+                margin-left: -10px;
+                .order-title {
+                    font-size: 15px;
+                    line-height: 1.5;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .order-info {
+                    line-height: 1.5;
+                    font-size: 12px;
+                    color: #9B9B9B;
+                    word-break: break-all;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    /** 对象作为伸缩盒子模型显示 **/
+                    -webkit-box-orient: vertical;
+                    /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+                    -webkit-line-clamp: 2;
+                    /** 显示的行数 **/
+                    overflow: hidden;
+                    /** 隐藏超出的内容 **/
+                }
+            }
+            .set-order-input {
+                position: relative;
+                height: 30px;
+                width: 100px;
+                border-radius: 0;
+                border-color: #BFBFBF;
+                float: right;
+                &.mui-numbox {
+                    padding: 0;
+                    .mui-btn {
+                        border-radius: 0;
+                        border: none;
+                        width: 30px;
+                        background-color: #ffffff;
+                        color: #77CEC3;
+                    }
+                }
+            }
+            .order-model {
+                margin-bottom: 5px;
+                border: solid 1px #BFBFBF;
+                color: #9B9B9B;
+                padding: 0 0;
+                &:before {
+                    font-size: 12px;
+                    line-height: 29px;
+                    position: relative;
+                    left: 5px;
+                }
+                .set-order-input-value {
+                    padding-left: 5px;
+                    font-size: 13px;
+                    line-height: 29px;
+                    &:empty:before {
+                        content: '型号';
+                    }
+                }
+                .order-model-icon {
+                    font-size: 20px;
+                    line-height: 29px;
+                    vertical-align: middle;
+                    position: absolute;
+                    top: 0;
+                    right: 5px;
+                    bottom: 0;
+                    left: 0;
+                    color: #77CEC3;
+                }
+            }
+        }
+        .set-order-item-footer {
+            padding: 8px 0;
+            padding-right: 10px;
+            .order-depot {
+                color: #52B2BE;
+            }
+            .order-depot-num {
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+
+/*遮罩*/
+
+.mui-backdrop {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.people-list {
+    .people-item {
+        padding: 10px 20px;
+        font-size: 13px;
+        color: #9B9B9B;
+        border-bottom: solid 1px #D8D8D8;
+        .people-name {
+            font-size: 14px;
+            color: #000;
+        }
+    }
+}
+
+
+/*周期选择*/
+
+.cycle {
+    font-size: 15px;
+    padding: 10px;
+    border-bottom: solid 1px #D8D8D8;
+    .start-time,
+    .end-time,
+    .cycle-time {
+        color: #52B2BE;
+        padding-left: 5px;
+    }
+    .mui-row {
+        padding: 5px 0;
+    }
+}
+
+#addAddressee {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

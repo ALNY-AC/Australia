@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>创建订单</title>
+    <script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+    <div id="pageApp">
+
+        <div id="addAddressee" class="mui-popover">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell" @tap='addAddressee(1)'>
+                    <a href="#">新增收货地址</a>
+                </li>
+                <li class="mui-table-view-cell" @tap='addAddressee(2)'>
+                    <a href="#">新增代理商</a>
+                </li>
+            </ul>
+        </div>
+        <div class="form-inline" v-if='isShowAddressee'>
+            <div class="mui-row">
+                <div class="mui-col-xs-6">
+                    <input type="text" v-model='addressee' @tap='searchAddressee()' placeholder="搜索收件人">
+                </div>
+                <div class="mui-col-xs-4">
+                    <span class="add-people" @tap='addAddressee(0)'>
+                        <!-- <a href="#popover">+新建联系人</a> -->
+                        +新建联系人
+                    </span>
+                </div>
+                <div class="mui-col-xs-2">
+                    <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined" @tap='searchAddressee()'>搜索</button>
+                </div>
+            </div>
+        </div>
+
+        <div v-if='isSHowCycle' class="cycle">
+
+            <div class="mui-row">
+
+                <div class="mui-col-xs-6">
+                    开始时间
+                    <span class="start-time" @tap='setStartTime()'>{{startTime.text}}</span>
+                </div>
+                <div class="mui-col-xs-6">
+                    结束时间
+                    <span class="end-time" @tap='setEndTime()'>{{endTime.text}}</span>
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-12">
+                    配送时间
+                    <span class="cycle-time" @tap='setCycleTime()'>{{cycleTime.text}}</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="people-list" v-if='isShowPeopleList'>
+            <div class="people-item" @tap='setAddressee(item,index)' v-for='(item,index) in addresseeList'>
+                <div class="mui-row">
+                    <div class="mui-col-xs-12">
+                        <div class="people-name">{{item.name}}</div>
+                        <div>{{item.phone}}</div>
+                        <div>北京市 东城区 世纪花园999号</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="set-order-list" v-if='isShowOrderList'>
+            <div class="set-order-item" v-for='(item,index) in orderList'>
+
+                <div class="mui-row" @tap='check(item,index)'>
+                    <div class="mui-col-xs-1">
+                        <div class="set-order-item-check">
+                            <!-- 复选框 -->
+                            <div class="mui-checkbox checkbox-box ">
+                                <div class="input-box">
+                                    <input name="checkbox1" value="" type="checkbox" v-model='item.isCheck'>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mui-col-xs-11">
+                        <!-- 内容区 -->
+                        <!-- 身体 -->
+                        <div class="mui-row set-order-item-body">
+
+                            <div class="mui-col-xs-12">
+                                <div class="mui-row">
+                                    <div class="mui-col-xs-3">
+                                        <img src="" class="order-head" alt="">
+                                    </div>
+                                    <div class="mui-col-xs-5 order-info-box">
+                                        <div class="order-title">
+                                            {{item.title}} Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </div>
+                                        <div class="order-info">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem officiis obcaecati soluta suscipit nobis perferendis cumque
+                                            enim ipsum amet itaque esse, reiciendis, consequuntur alias fugiat dolorem commodi
+                                            cupiditate labore sapiente!
+                                        </div>
+                                    </div>
+                                    <div class="mui-col-xs-4">
+                                        <!-- 型号  -->
+                                        <div href="#popover" class="order-model set-order-input" @tap.stop='showOrderModel(item,index)'>
+                                            <span class="set-order-input-value">{{item.type.text}}</span>
+                                            <span class="text-right order-model-icon">
+                                                <i class="fa fa-angle-down "></i>
+                                            </span>
+                                        </div>
+                                        <!-- 数量 -->
+                                        <div class="mui-numbox set-order-input">
+                                            <button class="mui-btn mui-numbox-btn-minus" type="button" @tap.stop='orderRemove(item,index)'>-</button>
+                                            <input class="mui-numbox-input" type="number" v-model='item.num' />
+                                            <button class="mui-btn mui-numbox-btn-plus" type="button" @tap.stop='orderAdd(item,index)'>+</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 身体end -->
+
+                        <!-- 脚 -->
+
+                        <!-- 创建订单 -->
+                        <div class="mui-row set-order-item-footer">
+
+                            <div class="mui-col-xs-12" v-if='isShowDepot'>
+                                发货仓库：
+                                <span class="order-depot" @tap='setDepot(item,index)'>北京仓库</span>
+                                <span class="mui-pull-right">
+                                    <span class="order-depot-num">{{9999+index}}</span>件
+                                </span>
+                            </div>
+
+                            <div v-if='!isShowDepot'>
+                                <span class="mui-pull-right">
+                                    <span class="order-depot-num">{{item.num}}</span>件
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <!-- 脚end -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="fixed-btn-list">
+
+            <div class="mui-row" v-if='!isEditModel'>
+                <div class="mui-col-xs-6">
+                    <div class="fixed-btn-item fixed-btn-info" @tap='saveOrder(false)'>保存并添加新订单</div>
+                </div>
+                <div class="mui-col-xs-6">
+                    <div class="fixed-btn-item fixed-btn-primary" @tap='saveOrder(true)'>订单支付</div>
+                </div>
+            </div>
+            <div class="mui-row" v-if='isEditModel'>
+                <div class="mui-col-xs-12">
+                    <div class="fixed-btn-item fixed-btn-primary" @tap='saveOrder("save")'>保存订单</div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>

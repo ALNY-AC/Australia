@@ -1,0 +1,95 @@
+body {
+    background-color: #ffffff;
+    color: #4A4A4A;
+}
+
+.addressee-info {
+    padding: 20px;
+    font-size: 14px;
+    border-bottom: solid 1px #D8D8D8;
+    .mui-row {
+        margin: 5px 0;
+    }
+    .addressee-key {
+        padding: 3px;
+    }
+    .addressee-value {
+        border: 1px solid #D8D8D8;
+        padding: 3px;
+        color: #9B9B9B;
+        &.addressee-name {}
+        &.addressee-phone {}
+        &.addressee-lcoation {}
+    }
+}
+
+.order-list {
+    padding: 20px;
+    .order-item {
+        border-bottom: solid 1px #D8D8D8;
+        font-size: 14px;
+        padding: 5px 0;
+        .title {
+            padding: 2px 0;
+        }
+        .info {
+            padding: 2px 0;
+            .type {}
+            .money {
+                color: #3BAEAD;
+            }
+        }
+    }
+}
+
+.logistics-list {
+    padding: 10px 0;
+    .gui {
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        border-bottom: solid 1px #d8d8d8;
+        padding-bottom: 20px;
+        .node {
+            display: inline-block;
+            vertical-align: middle;
+            width: 40px;
+        }
+        .line {
+            position: relative;
+            top: -15px;
+            display: inline-block;
+            .line-item {
+                margin: 0 2px;
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                background-color: #EBEBEB;
+                border-radius: 100%;
+            }
+            &.active {
+                .line-item {
+                    background-color: #2B7FA6;
+                }
+            }
+        }
+    }
+    .info {
+        border: solid 1px #D8D8D8;
+        padding: 5px;
+        font-size: 13px;
+        overflow: auto;
+        height: 200px;
+        margin: 10px;
+        .info-item {
+            border-bottom: solid 1px #D8D8D8;
+            padding: 2px 0;
+            .text {
+                padding: 2px 0;
+            }
+            .item {
+                padding: 2px 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,546 @@
+body {
+	background: #fff;
+}
+
+[v-cloak] {
+	display: none;
+}
+input[type=text]{
+	height: 34px;
+	font-size: 14px;
+}
+#pageApp {
+}
+.mui-btn.mui-btn-block{
+
+	overflow: hidden;
+	font-size: 14px;
+}
+.mui-btn-white {
+	color: #fff;
+	border-color: #fff;
+	font-size: 14px;
+	opacity: 0.8;
+}
+
+.mui-btn-primary {
+	color: #fff;
+	border-color: #2b7fa6;
+	background-color: #2b7fa6;
+}
+.mui-btn-gray{
+	color: #fff;
+	border-color: #BFBFBF;
+	background-color: #BFBFBF;
+}
+
+.mui-btn-edit {
+	background-color: #2b7fa6;
+}
+.mui-btn-del {
+	background-color: #e96371;
+}
+
+.mui-btn-outlined.mui-btn-primary {
+	color: #2b7fa6;
+	background-color: transparent;
+}
+
+.mui-btn-primary:enabled:active {
+	color: #fff;
+	border-color: #2b7fa6;
+	background: #2b7fa6;
+}
+
+
+/*登陆组件开始*/
+
+.login-mode {
+	width: 100%;
+	/*bottom: 20px;*/
+	/*position: absolute;*/
+	padding: 0 20px;
+}
+
+
+/*设置info-box-status1的样式 单独加这个样式的有padding-left*/
+
+.info-box-status1 {
+	padding-left: 10px;
+}
+
+
+/*微信图标的 样式*/
+
+.mui-icon.mui-icon-weixin {
+
+}
+
+
+/*登陆组件结束*/
+
+
+/*设置的   其他方式登陆的样式开始*/
+
+.other {
+	width: 100%;
+	height: 60px;
+	position: relative;
+	text-align: center;
+}
+
+.other-4-one {
+	height: 60px;
+	line-height: 60px;
+}
+
+.other-4-two {
+	color: #d9d9d9;
+	font-size: 0.8em;
+	line-height: 69px;
+	white-space: nowrap;
+}
+
+.other-4-three {
+	height: 60px;
+	line-height: 60px;
+}
+
+.line {
+	width: 100%;
+	border: 1px solid #d9d9d9;
+	display: inline-block;
+}
+
+
+/*登陆注册共用的样式开始===================================================================================*/
+
+
+/*设置顶部的手机号和验证码的上外边距*/
+
+.panel-body-top1 {
+	/*position: absolute;*/
+	padding: 0 20px;
+	/*top: 20px;*/
+	text-align: center;
+	width: 100%;
+	top: 100px;
+}
+
+.panel-body-top2 {
+	position: absolute;
+	padding: 0 20px;
+	top: 20px;
+	text-align: center;
+	width: 100%;
+	top: 100px;
+	/*display: none;*/
+}
+
+
+/*输入电话号码的容器样式*/
+
+.info-box {
+	width: 100%;
+	height: 60px;
+	/*background: gray;*/
+	border-bottom: 1px solid #ede9e5;
+}
+
+.info-1 {
+	/*background: blue;*/
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+}
+
+.info-3 {
+	/*background: red;*/
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+}
+
+.info-8 {
+	/*background: green;*/
+	height: 60px;
+	line-height: 60px;
+}
+
+.info-11 {
+	height: 60px;
+	line-height: 60px;
+}
+
+
+/*input[type=text] {
+	border: 1px solid rgba(0, 0, 0, 0);
+}*/
+
+input[type=text].no-border {
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+
+
+/*改变验证码input的padding*/
+
+input[type=text].code {
+	padding-left: 0;
+}
+input[type=password].no-border {
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+
+
+/*改变验证码input的padding*/
+
+input[type=password].code {
+	padding-left: 0;
+}
+ ::-webkit-input-placeholder {
+	color: #aeaaa6;
+	font-size: 14px;
+}
+
+
+/*设置手机号登录的前边的图标的样式*/
+
+.tel-head-icon {
+	color: #3787ab;
+}
+
+
+/*手机号下拉列表的样式开始*/
+
+.tel-select {
+	width: 80%;
+	height: 40px;
+	position: relative;
+	background: transparent;
+	display: inline-block;
+	color: #fff;
+	font-size: 14px;
+}
+
+.tel-select select {
+	border: none;
+	outline: none;
+	width: 100%;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: transparent;
+	padding: 0;
+	padding-left: 2px;
+	color: #52b2be;
+}
+
+.tel-select select option {
+	background: #5eadb9;
+}
+
+.tel-select:after {
+	content: "";
+	width: 14px;
+	height: 8px;
+	background: url(assets/img/all/tel-select.png);
+	background-size: cover;
+	position: absolute;
+	right: 2px;
+	top: 67%;
+	pointer-events: none;
+}
+
+
+/*手机号下拉列表的样式结束*/
+
+
+/*组件2的样式开始*/
+
+.info-6 {
+	height: 60px;
+	line-height: 60px;
+	/*background: red;*/
+}
+
+.info-5 {
+	height: 60px;
+	/*background: blue;*/
+	text-align: center;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.mui-btn-obtain {
+	color: #fff;
+	border-color: #bfbfbf;
+	font-size: 14px;
+	background: #bfbfbf;
+	padding: 10px 0;
+}
+
+
+/*组件2的样式结束*/
+
+
+/*找回密码样式开始*/
+
+.back-password {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: right;
+	color: #c3c3c3;
+}
+
+
+/*找回密码样式结束*/
+
+
+/*登陆注册共用的样式结束====================================================================================*/
+
+
+/*设置的   其他方式登陆的样式结束*/
+
+
+/*销售的样式集合开始*/
+
+.sale-panel ul {
+	margin: 0;
+	padding: 0;
+}
+
+.sale-panel ul li {
+	list-style: none;
+	height: 180px;
+	border: 1px solid #f5f5f5;
+	border-width: 1px 0 2px 0px;
+	background: #fff;
+	overflow: hidden;
+	margin-bottom: -1px;
+}
+
+.sale-panel ul li.active {
+	border-color: #d2e0e7;
+}
+
+.sale-panel ul li.active .sale-left {
+	background: #d2e0e7;
+}
+
+.sale-left {
+	height: 180px;
+	line-height: 180px;
+	text-align: center;
+	background: #f2f2f2;
+}
+
+.sale-center {
+	background: #fff;
+}
+
+.sale-right {
+	background: #fff;
+	/*margin-left: -20px;*/
+	position: absolute;
+	left: -10px;
+	right: 0;
+	padding-right: 5px;
+}
+
+
+/*改mui进速条的样式*/
+
+.mui-progressbar {
+	display: inline-block;
+	height: 15px;
+	border-radius: 15px;
+	background: #ebebeb;
+}
+
+
+/*默认的交易笔的样式  进速条*/
+
+.mui-progressbar span {
+	border-radius: 15px;
+	background: #77cec3;
+}
+
+
+/*商品数的金属条的样式*/
+
+.mui-progressbar.shop-progressbar span {
+	border-radius: 15px;
+	background: #52b2be;
+}
+
+
+/*月度销售里边的最上边的进速条的样式*/
+
+.mui-progressbar.cash-progressbar span {
+	border-radius: 15px;
+	background: #4e93b2;
+}
+
+
+/*右侧上边和下边*/
+
+.sale-right-top {
+	height: 90px;
+	/*background: white;*/
+	padding: 25px 5px;
+}
+
+.sale-right-bottom {
+	height: 90px;
+	padding: 25px 5px;
+}
+
+.cash {
+	font-size: 14px;
+	color: #5a9cba;
+	margin-right: 7px;
+}
+
+.cash-amount {
+	padding-left: 5px;
+	/*margin-left: 5px;*/
+	font-size: 24px;
+	color: #4c4c4c;
+}
+
+.pen {
+	font-size: 14px;
+	color: #5a9cba;
+	margin-right: 7px;
+}
+
+.pen-amount {
+	padding-left: 5px;
+	/*margin-left: 5px;*/
+	font-size: 24px;
+	color: #4c4c4c;
+}
+
+.shop {
+	font-size: 14px;
+	color: #5a9cba;
+	margin-right: 7px;
+}
+
+.shop-amount {
+	padding-left: 5px;
+	/*margin-left: 5px;*/
+	font-size: 24px;
+	color: #4c4c4c;
+}
+
+
+/*返利和月度用到的样式*/
+
+.sale-right-bottom-left {
+	height: 90px;
+	padding: 0 5px;
+}
+
+.sale-right-bottom-right {
+	height: 90px;
+	padding: 0 5px;
+}
+
+
+/*销售的样式集合结束*/
+
+
+
+
+/*工具类================================================================*/
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.tl {
+	text-align: left;
+}
+
+.tc {
+	text-align: center;
+}
+
+.tr {
+	text-align: right;
+}
+
+.a-line {
+	white-space: nowrap;
+	overflow: auto;
+	text-overflow: ellipsis;
+}
+
+.one-line {
+	word-break: break-all;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	/** 对象作为伸缩盒子模型显示 **/
+	-webkit-box-orient: vertical;
+	/** 设置或检索伸缩盒对象的子元素的排列方式 **/
+	-webkit-line-clamp: 1;
+	/** 显示的行数 **/
+	overflow: hidden;
+	/** 隐藏超出的内容 **/
+}
+
+.two-line {
+	word-break: break-all;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	/** 对象作为伸缩盒子模型显示 **/
+	-webkit-box-orient: vertical;
+	/** 设置或检索伸缩盒对象的子元素的排列方式 **/
+	-webkit-line-clamp: 2;
+	/** 显示的行数 **/
+	overflow: hidden;
+	/** 隐藏超出的内容 **/
+}
+
+.three-line {
+	word-break: break-all;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	/** 对象作为伸缩盒子模型显示 **/
+	-webkit-box-orient: vertical;
+	/** 设置或检索伸缩盒对象的子元素的排列方式 **/
+	-webkit-line-clamp: 3;
+	/** 显示的行数 **/
+	overflow: hidden;
+	/** 隐藏超出的内容 **/
+}
+
+.nowrap {
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+
+.gray {
+	color: #999999;
+}
+
+.text-red{
+	color: red;
+}
+.text-primary{
+	color: #2B7FA6;
+}
+.text-muted{
+	color: #BFBFBF;
+}
+.text-blue{
+	color: #52B2BE;
+}

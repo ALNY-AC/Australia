@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="utils/mui/css/mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="utils/font/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="utils/origin/origin.css" />
+    <link rel="stylesheet" type="text/css" href="utils/sk/sk.css" />
+    <link rel="stylesheet" type="text/css" href="app.css" />
+    <style>
+        .bg {
+            background-image: url(assets/img/all/bg.png);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            padding: 0;
+            margin: 0;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        .box {
+            display: block;
+            position: relative;
+            top: 110px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .loading {
+            top: 100px;
+            position: relative;
+        }
+
+        .loading .sk-spinner-wave.sk-spinner {
+            width: 100px;
+        }
+
+        .loading .sk-spinner-wave div {
+            background-color: #f9f9f9;
+            width: 3px;
+            margin: 0 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg">
+        <div class="box">
+            <img class="logo" src="assets/img/all/WechatIMG22.png" alt="">
+            <div class="spiner-example loading">
+                <div class="sk-spinner sk-spinner-wave">
+                    <div class="sk-rect1"></div>
+                    <div class="sk-rect2"></div>
+                    <div class="sk-rect3"></div>
+                    <div class="sk-rect4"></div>
+                    <div class="sk-rect5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="utils/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="utils/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="utils/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="utils/origin/origin.js" type="text/javascript" charset="utf-8"></script>
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>

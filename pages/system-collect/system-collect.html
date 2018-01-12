@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的收藏</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<div id="pageApp">
+			<div class="collect">
+				<ul id="OA_task_2" class="collect-list mui-table-view">
+					<li class="mui-table-view-cell" v-for="(item,index) in collectList" @tap="goInfo(item,index)" :key="item.id">
+						<div class="mui-slider-right mui-disabled">
+							<a @tap="del(item,index)" class="mui-btn mui-btn-del mui-icon mui-icon-trash"></a>
+						</div>
+						<div class="mui-slider-handle">
+							<div class="mui-row">
+								<div class="mui-col-xs-3 collect-left">
+									<div class="collect-head">
+										<img src="../../assets/img/index/index1.png" />
+									</div>
+								</div>
+								<div class="mui-col-xs-9 collect-right">
+									<div class="collect-title one-line">
+										{{item.title}}
+									</div>
+									<div class="collect-info two-line">
+										{{item.info}}
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="test-tool">
+				debug
+			</div>
+			<div class="test-tool-box">
+				<div class="test-tool-box-list">
+					<div class="test-tool-item" @tap='add()'>添加收藏</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

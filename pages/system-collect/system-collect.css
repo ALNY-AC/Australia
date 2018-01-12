@@ -1,0 +1,89 @@
+.mui-table-view-cell {
+	padding: 0;
+}
+
+
+/*改变ul的样式*/
+
+.collect-list {
+	margin: 0;
+	padding: 0;
+	/*background: red;*/
+}
+
+.collect-list li {
+	list-style: none;
+	/*padding-bottom: 5px;
+	margin-bottom: 5px;*/
+	/*border-bottom: 1px solid #f5f5f5;*/
+}
+
+.collect-list li:first-child {
+	/*margin-top: 10px;*/
+}
+
+
+/*左边样式*/
+
+.collect-left {
+	/*height: 100px;*/
+	/*background: red;*/
+	text-align: center;
+	padding: 10px 0;
+	/*vertical-align: middle;*/
+}
+
+
+/*左侧的图片的容器的样式*/
+
+.collect-head {
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+}
+
+.collect-head img {
+	width: 100%;
+}
+
+
+/*右边样式*/
+
+.collect-right {
+	padding: 10px 0;
+	/*height: 120px;*/
+	/*background: blue;*/
+}
+
+
+/*右侧的标题*/
+
+.collect-title {
+	/*height: 40px;*/
+	/*background: green;*/
+	color: #4a4a4a;
+	font-size: 14px;
+	text-align: left;
+	/*line-height: 40px;*/
+	padding-left: 5px;
+	padding-top: 2px;
+}
+
+
+/*右侧的详情*/
+
+.collect-info {
+	/*height: 68px;*/
+	/*background: yellow;*/
+	font-size: 13px;
+	text-align: left;
+	/*padding-top: 10px;*/
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #b1b1b1;
+	line-height: 25px;
+}
+
+.mui-table-view-cell:after {
+	left: 0px;
+}

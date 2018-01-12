@@ -1,0 +1,11 @@
+{
+    "pageConfig": {
+        "styles": {
+            "width": "50%"
+        },
+        "show": {
+            "aniShow": "slide-in-left",
+            "duration": "100"
+        }
+    }
+}

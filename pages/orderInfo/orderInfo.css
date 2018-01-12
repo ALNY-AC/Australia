@@ -1,0 +1,69 @@
+body {
+  background-color: #ffffff;
+  color: #4A4A4A; }
+
+.addressee-info {
+  padding: 20px;
+  font-size: 14px;
+  border-bottom: solid 1px #D8D8D8; }
+  .addressee-info .mui-row {
+    margin: 5px 0; }
+  .addressee-info .addressee-key {
+    padding: 3px; }
+  .addressee-info .addressee-value {
+    border: 1px solid #D8D8D8;
+    padding: 3px;
+    color: #9B9B9B; }
+
+.order-list {
+  padding: 20px; }
+  .order-list .order-item {
+    border-bottom: solid 1px #D8D8D8;
+    font-size: 14px;
+    padding: 5px 0; }
+    .order-list .order-item .title {
+      padding: 2px 0; }
+    .order-list .order-item .info {
+      padding: 2px 0; }
+      .order-list .order-item .info .money {
+        color: #3BAEAD; }
+
+.logistics-list {
+  padding: 10px 0; }
+  .logistics-list .gui {
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-bottom: solid 1px #d8d8d8;
+    padding-bottom: 20px; }
+    .logistics-list .gui .node {
+      display: inline-block;
+      vertical-align: middle;
+      width: 40px; }
+    .logistics-list .gui .line {
+      position: relative;
+      top: -15px;
+      display: inline-block; }
+      .logistics-list .gui .line .line-item {
+        margin: 0 2px;
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: #EBEBEB;
+        border-radius: 100%; }
+      .logistics-list .gui .line.active .line-item {
+        background-color: #2B7FA6; }
+  .logistics-list .info {
+    border: solid 1px #D8D8D8;
+    padding: 5px;
+    font-size: 13px;
+    overflow: auto;
+    height: 200px;
+    margin: 10px; }
+    .logistics-list .info .info-item {
+      border-bottom: solid 1px #D8D8D8;
+      padding: 2px 0; }
+      .logistics-list .info .info-item .text {
+        padding: 2px 0; }
+      .logistics-list .info .info-item .item {
+        padding: 2px 0; }

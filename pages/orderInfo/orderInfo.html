@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单详情</title>
+
+</head>
+
+<body>
+
+
+    <div id="pageApp">
+
+        <div v-if='isShowLogistics' class="logistics-list">
+            <!-- 物流信息面板 -->
+            <div class="mui-row">
+                <div class="gui">
+                    <div class="mui-col-xs-12">
+
+                        <img v-if='logistics.state>=1' src="../../assets/img/orderInfo/ic_Futures_on@3x.png" class="node" alt="">
+                        <img v-else='' src="../../assets/img/orderInfo/ic_Futures_nor@3x.png" class="node" alt="">
+                        <!--  -->
+                        <div v-bind:class="['line',{'active':logistics.state>=2}]">
+                            <div class="line-item"></div>
+                            <div class="line-item"></div>
+                            <div class="line-item"></div>
+                            <div class="line-item"></div>
+                        </div>
+                        <img v-if='logistics.state>=2' src="../../assets/img/orderInfo/ic_out_on@3x.png" class="node" alt="">
+                        <img v-else='' src="../../assets/img/orderInfo/ic_out_nor@3x.png" class="node" alt="">
+                        <!--  -->
+                        <div v-bind:class="['line',{'active':logistics.state>=3}]">
+                            <div class="line-item"></div>
+                            <div class="line-item"></div>
+                            <div class="line-item"></div>
+                            <div class="line-item"></div>
+                        </div>
+                        <img v-if='logistics.state>=3' src="../../assets/img/orderInfo/ic_Transport_on@3x.png" class="node" alt="">
+                        <img v-else='' src="../../assets/img/orderInfo/ic_Transport_nor@3x.png" class="node" alt="">
+                        <!--  -->
+                        <div v-bind:class="['line',{'active':logistics.state>=4}]">
+                            <div class="line-item"></div>
+                            <div class="line-item"></div>
+                            <div class="line-item"></div>
+                            <div class="line-item"></div>
+                        </div>
+                        <img v-if='logistics.state>=4' src="../../assets/img/orderInfo/ic_sign_on@3x.png" class="node" alt="">
+                        <img v-else='' src="../../assets/img/orderInfo/ic_sign_nor@3x.png" class="node" alt="">
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+            <div class="mui-row">
+                <!-- 信息面板 -->
+
+                <div class="info">
+                    <div class="info-item" v-for='(item,index) in logistics.info'>
+                        <div class="text">
+                            [苏州市]江苏苏州虎丘区分公司 已发出
+                        </div>
+                        <div class="time">
+                            2018年1月9日15:32:26
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="addressee-info">
+            <div class="mui-row">
+                <div class="mui-col-xs-4 addressee-key">
+                    收件人：
+                </div>
+                <div class="mui-col-xs-8 addressee-value addressee-name">
+                    张三
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-4 addressee-key">
+                    联系方式：
+                </div>
+                <div class="mui-col-xs-8 addressee-value addressee-phone">
+                    110-120-12138
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-4 addressee-key">
+                    送货地址：
+                </div>
+                <div class="mui-col-xs-8 addressee-value addressee-lcoation">
+                    北京市朝阳区
+                </div>
+            </div>
+        </div>
+
+        <div class="order-list">
+            <div class="order-item" v-for='(item,index) in orderList'>
+                <div class="title">
+                    {{item.title}}
+                </div>
+                <div class="info">
+                    <span class="type">{{item.type}}</span>
+                    <span class="mui-pull-right money">￥{{item.money}}</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 底部 -->
+        <div class="fixed-btn-list" v-if='isShowFixedBtn'>
+            <div class="mui-row">
+                <div class="mui-col-xs-12">
+                    <div class="fixed-btn-item fixed-btn-primary" @tap='editOrder(true)'>编辑</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-tool">debug</div>
+        <div class="test-tool-box">
+            <div class="test-tool-box-list">
+                <div class="test-tool-item" @tap='setModel(1)'>模拟未付款状态</div>
+                <div class="test-tool-item" @tap='setModel(2)'>模拟已付款状态</div>
+                <div class="test-tool-item" @tap='logistics.state=1'>模拟备货状态</div>
+                <div class="test-tool-item" @tap='logistics.state=2'>模拟出库状态</div>
+                <div class="test-tool-item" @tap='logistics.state=3'>模拟运输状态</div>
+                <div class="test-tool-item" @tap='logistics.state=4'>模拟签收状态</div>
+                <div class="test-tool-item" @tap='showNav()'>打开导航栏</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+
+</body>
+
+</html>

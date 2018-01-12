@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单查询</title>
+
+    <script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+
+</head>
+
+<body>
+    <!-- style="display: none" -->
+    <div id="pageApp">
+        <div class="mui-content">
+            <div id="slider" class="mui-slider mui-fullscreen">
+
+                <div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                    <div class="mui-scroll">
+                        <a :class="['mui-control-item',{'mui-active':index == activeIndex}]" v-for='(item,index) in navList' :href="'#item'+index+'mobile'">
+                            {{item.title}}
+                        </a>
+                    </div>
+                </div>
+
+                <div id="sliderGroup" class="mui-slider-group" :style="{ bottom: groupBottom }">
+                    <div :id="'item'+index+'mobile'" :class="['mui-slider-item mui-control-content',{'mui-active':index == activeIndex}]" v-for='(list,index) in orderList'>
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <!-- 全部 -->
+                                <div class="mui-row" v-if='index!=0&&editList[index].isShow'>
+                                    <div class="mui-col-xs-12 select-all">
+                                        <button type="button" @tap='editList[index].isEdit=!editList[index].isEdit' class="mui-btn mui-btn-outlined">编辑</button>
+                                        <button type="button" @tap='selectAll(list,true)' class="mui-btn mui-btn-outlined" v-if='editList[index].isEdit'>全选</button>
+                                        <button type="button" @tap='selectAll(list,false)' class="mui-btn mui-btn-outlined" v-if='editList[index].isEdit'>取消全选</button>
+                                    </div>
+                                </div>
+
+                                <ul class="mui-table-view order-list">
+                                    <li class="mui-table-view-cell order-list-item" @tap.stop='index!=0&&editList[index].isEdit?check(item,j):check()' v-for='(item,j) in list'>
+                                        <div class="mui-row">
+
+                                            <div class="mui-col-xs-2 select-box" v-if=' index != 0 && editList[index].isEdit '>
+                                                <div class="mui-checkbox checkbox-box">
+                                                    <input name="checkbox1" v-model='item.isActive' type="checkbox">
+                                                </div>
+                                            </div>
+
+                                            <div :class="[{'mui-col-xs-10': index != 0 && editList[index].isEdit},{'mui-col-xs-12':index != 0 && !editList[index].isEdit}]">
+                                                <div class="mui-row">
+                                                    <div class="mui-col-xs-6 title">{{item.title}}</div>
+                                                    <div class="mui-col-xs-6 text-right" v-html='getStateLabel(item,j)'></div>
+                                                </div>
+                                                <div class="mui-row footer">
+                                                    <div class="mui-col-xs-6 info">共10件商品</div>
+                                                    <div class="mui-col-xs-6 money text-right">
+
+                                                        <span @tap.stop='open(item,j)'>
+                                                            总价：￥2,999
+                                                            <span class="mui-icon mui-icon-arrowright "></span>
+                                                        </span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部 -->
+
+        <div class="fixed-btn-list">
+
+            <div class="mui-row" v-if='bottomModel == 1'>
+                <div class="mui-col-xs-6">
+                    <div class="fixed-btn-item fixed-btn-info" @tap='saveOrder(false)'>回收站</div>
+                </div>
+                <div class="mui-col-xs-6">
+                    <div class="fixed-btn-item fixed-btn-primary" @tap='goToPay(true)'>去支付</div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- <div class="test-tool-box">
+            <div class="test-tool-box-list">
+                <div class="test-tool-item" @tap='addOrder(1)'>添加一个待支付订单(本地视图)</div>
+                <div class="test-tool-item" @tap='addOrder(2)'>添加一个已出库订单(本地视图)</div>
+                <div class="test-tool-item" @tap='addOrder()'>添加一个随机订单(本地视图)</div>
+                <div class="test-tool-item" @tap='toAddOrder()'>添加订单(跳转页面)</div>
+                <div class="test-tool-item" @tap='editList[activeIndex].isShow=!editList[activeIndex].isShow'>设置当前列表编辑状态</div>
+                <div class="test-tool-item" @tap='showNav()'>打开导航栏</div>
+            </div>
+        </div> -->
+    </div>
+    <script>
+
+     
+     
+
+    </script>
+
+</body>
+
+</html>

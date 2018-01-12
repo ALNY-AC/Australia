@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../../utils/mui/css/mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../utils/origin/origin.css" />
+    <link rel="stylesheet" type="text/css" href="../../utils/font/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../app.css" />
+    <link rel="stylesheet" type="text/css" href="home.css" />
+    <title>Home</title>
+    <style>
+        input {
+            color: #000 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="pageApp">
+
+        <h1>Homestart</h1>
+        <h2 @tap='toIndex()'>到首页</h2>
+        <h2 @tap='addOrder()'>添加新商品</h2>
+
+        <input type="text" v-model='msg' name="" id="">
+        <input type="checkbox" name="" id="">
+
+    </div>
+
+    <script src="../../utils/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../utils/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../utils/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../utils/origin/origin.js" type="text/javascript" charset="utf-8"></script>
+    <script src="home.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $('.toIndex').on('tap', function () {
+        });
+
+
+    </script>
+
+</body>
+
+</html>
